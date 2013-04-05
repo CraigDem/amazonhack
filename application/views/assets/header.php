@@ -45,7 +45,7 @@
 	        	<span class="icon-bar"></span>
 	        	<span class="icon-bar"></span>
 	        </a>
-	        <a class="brand" href="#">Sendr</a>
+	        <a class="brand" href="<?= base_url();?>">Sendr</a>
 	        <div class="nav-collapse collapse">
             	<nav class="nav">
 	            	<li class="active"><a href="#">Home</a></li>
