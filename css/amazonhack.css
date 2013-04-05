@@ -22,10 +22,46 @@
 	padding-top: 5px;
 }
 
+.download-label {
+	padding-right: 15px;
+	margin-top: 0px;
+}
+
 .well {
 	margin-bottom: 5px !important;
 }
 
 .pre-scrollable {
 	max-height: 450px !important;
+}
+
+.logo {
+	background-image: url('../img/sendr-white-small.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: auto;
+	height: 100%;
+}
+
+.container-fluid {
+	width: 100%;
+	padding: 0 !important;
+}
+
+.message {
+	text-align: center;
+	padding-top: 40%;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+}
+
+.main_uploader {
+	margin: 0;
+	height: 100%;
 }

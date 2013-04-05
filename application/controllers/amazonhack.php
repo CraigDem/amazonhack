@@ -26,18 +26,21 @@
 		function video()
 		{				
 			$this->load->view('assets/header');
+			$this->load->view('assets/nav');
 			$this->load->view('video');
 			$this->load->view('assets/footer');
 		}
 		function audio()
 		{				
 			$this->load->view('assets/header');
+			$this->load->view('assets/nav');
 			$this->load->view('audio');
 			$this->load->view('assets/footer');
 		}
 		function text()
 		{				
 			$this->load->view('assets/header');
+			$this->load->view('assets/nav');
 			$this->load->view('text');
 			$this->load->view('assets/footer');
 		}

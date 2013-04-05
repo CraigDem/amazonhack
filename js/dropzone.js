@@ -423,7 +423,7 @@ require.register("dropzone/lib/dropzone.js", function(exports, require, module){
     Dropzone.prototype.defaultOptions = {
       url: null,
       method: "post",
-      parallelUploads: 2,
+      parallelUploads: 1,
       maxFilesize: 256,
       paramName: "file",
       createImageThumbnails: true,
@@ -434,7 +434,7 @@ require.register("dropzone/lib/dropzone.js", function(exports, require, module){
       clickable: true,
       enqueueForUpload: true,
       previewsContainer: null,
-      dictDefaultMessage: "Drop files here to upload",
+      dictDefaultMessage: "Drop files here or simply click to upload",
       dictFallbackMessage: "Your browser does not support drag'n'drop file uploads.",
       dictFallbackText: "Please use the fallback form below to upload your files like in the olden days.",
       accept: function(file, done) {
