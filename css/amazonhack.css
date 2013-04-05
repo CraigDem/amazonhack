@@ -1,0 +1,15 @@
+.dropbox {
+	width: 450px;
+	padding: 25px;
+	min-height: 200px;
+	background-color: pink;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 5px;
+}
+
+.download {
+	margin-left: auto;
+	margin-right: auto;
+	width: 140px;
+}
