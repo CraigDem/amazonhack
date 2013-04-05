@@ -23,17 +23,10 @@
     </style>
 
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-
+    <script type="text/javascript" src="<?= base_url('/js/dropzone.js');?>"></script>
+    
 	<!-- Generic page styles -->
 	<link rel="stylesheet" href="<?= base_url('/css/style.css');?>">
-	<!-- Bootstrap CSS fixes for IE6 -->
-	<!--[if lt IE 7]><link rel="stylesheet" href="http://blueimp.github.com/cdn/css/bootstrap-ie6.min.css"><![endif]-->
-	<!-- Bootstrap Image Gallery styles -->
-	<link rel="stylesheet" href="http://blueimp.github.com/Bootstrap-Image-Gallery/css/bootstrap-image-gallery.min.css">
-	<!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
-	<link rel="stylesheet" href="<?= base_url('/css/jquery.fileupload-ui.css');?>">
-	<!-- CSS adjustments for browsers with JavaScript disabled -->
-	<noscript><link rel="stylesheet" href="css/jquery.fileupload-ui-noscript.css"></noscript>
 
 </head>
 
