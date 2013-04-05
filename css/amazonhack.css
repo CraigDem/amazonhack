@@ -11,5 +11,21 @@
 .download {
 	margin-left: auto;
 	margin-right: auto;
-	width: 140px;
+	padding-bottom: 10px;
+}
+
+.download-button {
+	margin-left: 5px;
+}
+
+.download-buttons {
+	padding-top: 5px;
+}
+
+.well {
+	margin-bottom: 5px !important;
+}
+
+.pre-scrollable {
+	max-height: 450px !important;
 }

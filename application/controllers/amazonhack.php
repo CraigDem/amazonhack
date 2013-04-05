@@ -35,6 +35,12 @@
 			$this->load->view('audio');
 			$this->load->view('assets/footer');
 		}
+		function text()
+		{				
+			$this->load->view('assets/header');
+			$this->load->view('text');
+			$this->load->view('assets/footer');
+		}
 		
 	}
 	

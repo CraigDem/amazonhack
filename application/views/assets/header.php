@@ -22,6 +22,8 @@
     	}
     </style>
     <!--<link href="<?= base_url('/css/bootstrap-responsive.css'); ?>" rel="stylesheet">-->
+    <script>// make code pretty
+    window.prettyPrint && prettyPrint()</script>
 
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 
