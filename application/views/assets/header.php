@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
     
-    <title>Amazonhack</title>
+    <title>Sendr</title>
     
     <meta name="description" content="#ilwhack">
     <meta name="author" content="SkyHopper">
@@ -21,18 +21,11 @@
     		padding-top: 60px;
     	}
     </style>
-    <!--<link href="<?= base_url('/css/bootstrap-responsive.css'); ?>" rel="stylesheet">-->
-    <script>// make code pretty
-    window.prettyPrint && prettyPrint()</script>
 
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 
-    <!-- Bootstrap CSS Toolkit styles
-	<link rel="stylesheet" href="http://blueimp.github.com/cdn/css/bootstrap.min.css">-->
 	<!-- Generic page styles -->
 	<link rel="stylesheet" href="<?= base_url('/css/style.css');?>">
-	<!-- Bootstrap styles for responsive website layout, supporting different screen sizes
-	<link rel="stylesheet" href="http://blueimp.github.com/cdn/css/bootstrap-responsive.min.css">-->
 	<!-- Bootstrap CSS fixes for IE6 -->
 	<!--[if lt IE 7]><link rel="stylesheet" href="http://blueimp.github.com/cdn/css/bootstrap-ie6.min.css"><![endif]-->
 	<!-- Bootstrap Image Gallery styles -->
@@ -52,7 +45,7 @@
 	        	<span class="icon-bar"></span>
 	        	<span class="icon-bar"></span>
 	        </a>
-	        <a class="brand" href="#">Project name</a>
+	        <a class="brand" href="#">Sendr</a>
 	        <div class="nav-collapse collapse">
             	<nav class="nav">
 	            	<li class="active"><a href="#">Home</a></li>

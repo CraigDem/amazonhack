@@ -1,8 +1,8 @@
-<link href="<?= base_url('/css/prettify.css');?>" type="text/css" rel="stylesheet" />
-<script type="text/javascript" src="<?= base_url('/js/prettify.js');?>"></script>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?skin=default"></script>
 
 <div class="container">
     <div class="well">
+    	
       	<pre class="prettyprint linenums"><?= file_get_contents(base_url('Nmax.java')); ?></pre>
     </div>
     <div class="row-fluid">
