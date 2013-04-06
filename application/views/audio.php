@@ -12,12 +12,11 @@
 	    </audio>
 	</div>
 	<div class="row-fluid">
-		<div class="span2">
-	    		<p>Size: <?php if ($file_size > 1024) { echo (round($file_size / 1024, 2)) . "Mb"; } else { echo $file_size . "Kb"; }?></p>
-	    	</div>
-		<div class="span9 download-buttons pull-right">
+		<div class="span9">
+    		<p>Filename: <?= $title; ?> &emsp; Size: <?php if ($file_size > 1024) { echo (round($file_size / 1024, 2)) . "Mb"; } else { echo $file_size . "Kb"; }?></p>
+    	</div>
+		<div class="span3 download-buttons pull-right">
 			<a class="btn btn-large btn-info pull-right" href="<?= base_url($file_name); ?>">Download</a>
-			<h2 class="pull-right download-label" style="display:block-inline;">Download:</h2>		
 		</div>
 	</div>
 </div>

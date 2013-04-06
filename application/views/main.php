@@ -21,7 +21,7 @@
 			<a href="about.html"class="muted credit" style="padding-left:5px;">About us</a>	-->	
 		</div>
 		<div class="span6">
-			<h4 class="muted credit" style="text-align:center;">Drop files above or simply click above to upload</h4>
+			<h4 class="muted credit" style="text-align:center;">Drop onto this window or simply click above to upload</h4>
 		</div>
 		<div class="span3">
 		</div>
