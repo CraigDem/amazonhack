@@ -12,11 +12,10 @@
     </div>
     <div class="row-fluid">
 		<div class="span2">
-	    		<p>Size: <?= $file_size;?> Kb</p>
+	    		<p>Size: <?php if ($file_size > 1024) { echo (round($file_size / 1024, 2)) . "Mb"; } else { echo $file_size . "Kb"; }?></p>
 	    	</div>
 	    <div class="span9 download-buttons pull-right">
-			<a href="<?= base_url($file_name); ?>" class="btn btn-large btn-info pull-right download-button"><i class="icon-white icon-download"></i> Native</a>
-			<h2 class="pull-right download-label" style="display:block-inline;">Download as:</h2>		
+			<a href="<?= base_url($file_name); ?>" class="btn btn-large btn-info pull-right download-button"><i class="icon-white icon-download"></i> Download</a>		
 		</div>
     </div>
 </div>
