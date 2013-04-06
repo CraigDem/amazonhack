@@ -19,8 +19,8 @@ class Get_file extends CI_Controller {
 		
 		$data = $this->retrieval_model->get_file($token);
 		
-		$url_to_file = base_url("download/{$data['file_identifier']}/{$data['name']}");
+		$url_to_file = "/download/{$data['file_identifier']}/{$data['name']}";
 		
-		$this->load->view($data->view, array('file_name' => $url_to_file, 'file_size' => $data->size));
+		$this->load->view($data['view'], array('file_name' => $url_to_file, 'file_size' => $data['size']));
 	}
 }

@@ -14,7 +14,7 @@
 	</div>
 	<div class="row-fluid">
 		<div class="span2">
-	    		<h2>Size: <?= $file_size;?> Kb</h2>
+	    		<p>Size: <?= $file_size;?> Kb</p>
 	    	</div>
 		<div class="span9 download-buttons pull-right">
 			<div class="btn-group dropup pull-right download-button">
