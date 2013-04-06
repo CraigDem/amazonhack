@@ -5,8 +5,9 @@ class Upload_model extends CI_Model {
 		$this->load->library("s3");
 		
 		$file = $this->s3->inputFile("./temp/$file_name");
+
 		$success = $this->s3->putObject($file, $bucket, $file_identifier);
-		
+
 		// Delete the temp file
 		unlink("./temp/$file_name");
 		

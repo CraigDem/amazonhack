@@ -1,3 +1,7 @@
+.preview {
+	display: none;
+}
+
 .dropbox {
 	width: 450px;
 	padding: 25px;
