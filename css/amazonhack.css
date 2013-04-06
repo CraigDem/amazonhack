@@ -41,7 +41,7 @@
 }
 
 .logo {
-	background-image: url('../img/sendr-white-small.png');
+	background-image: url('../img/sendr.png');
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: auto;
@@ -74,4 +74,9 @@ body {
 .main_uploader {
 	margin: 0;
 	height: 100%;
+}
+
+.brand {
+	padding-top: 5px !important;
+	padding-bottom: 5px !important;
 }
