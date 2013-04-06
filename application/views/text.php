@@ -8,7 +8,7 @@
 
 <div class="container">
     <div class="well">	
-      	<pre class="pre-scrollable prettyprint linenums"><?= file_get_contents('.'.$file_name); ?></pre>
+      	<pre class="pre-scrollable prettyprint linenums"><?= htmlentities(file_get_contents('.'.$file_name)); ?></pre>
     </div>
     <div class="row-fluid">
 		<div class="span2">

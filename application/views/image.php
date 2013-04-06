@@ -25,7 +25,7 @@
 	    	</div>
 			<a href="#" class="btn btn-large btn-info pull-right download-button"><i class="icon-white icon-download"></i> GIF</a>
 			<a href="#" class="btn btn-large btn-info pull-right download-button"><i class="icon-white icon-download"></i> JPG</a>
-			<a href="<?= base_url('/img/nyancat.png'); ?>" class="btn btn-large btn-info pull-right download-button"><i class="icon-white icon-download"></i> Native</a>
+			<a href="<?= base_url($file_name); ?>" class="btn btn-large btn-info pull-right download-button"><i class="icon-white icon-download"></i> Native</a>
 			<h2 class="pull-right download-label" style="display:block-inline;">Download as:</h2>		
 		</div>
     </div>

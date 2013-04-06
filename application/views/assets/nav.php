@@ -15,7 +15,7 @@
 	        <a class="brand" href="<?= base_url();?>"><img src="<?= base_url('/img/sendr-title.png'); ?>" /></a>
 	        <div class="nav-collapse collapse">
             	<nav class="nav">
-	            	<li class="active"><a href="#">Home</a></li>
+	            	<li class="active"><a href="<?= base_url();?>">Home</a></li>
             	</nav>
 			</div><!--/.nav-collapse -->
 		</div>

@@ -6,7 +6,7 @@
 
 <div class="container">
     <div class="well">	
-      	<a class="btn btn-large btn-info" href="<?= $file_name; ?>" />
+      	<a class="btn btn-large btn-info" href="<?= base_url($file_name); ?>">Download</a>
     </div>
     <div class="row-fluid">
 		<div class="span2">

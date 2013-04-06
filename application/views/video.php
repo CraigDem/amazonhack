@@ -15,11 +15,7 @@
     		<h2>Size: <?= $file_size;?> Kb</h2>
     	</div>
 		<div class="span9 download-buttons pull-right">
-			<a href="#" class="btn btn-large btn-info pull-right download-button"><i class="icon-white icon-download"></i> FLV</a>
-			<a href="#" class="btn btn-large btn-info pull-right download-button"><i class="icon-white icon-download"></i> OGG</a>
-			<a href="#" class="btn btn-large btn-info pull-right download-button"><i class="icon-white icon-download"></i> MP4</a>
-			<a href="#" class="btn btn-large btn-info pull-right download-button"><i class="icon-white icon-download"></i> Native</a>
-			<h2 class="pull-right download-label" style="display:block-inline;">Download as:</h2>		
+			<a href="<?= base_url($file_name); ?>" class="btn btn-large btn-info pull-right download-button"><i class="icon-white icon-download"></i> Download</a>		
 		</div>
     </div>
 </div>

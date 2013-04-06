@@ -16,8 +16,8 @@
 	    		<p>Size: <?= $file_size;?> Kb</p>
 	    	</div>
 		<div class="span9 download-buttons pull-right">
-			<h2 class="pull-right download-label" style="display:block-inline;">Download:</h2>	
-			<a class="btn btn-large btn-info" href="<?= base_url($file_name); ?>">Download</a>	
+			<a class="btn btn-large btn-info pull-right" href="<?= base_url($file_name); ?>">Download</a>
+			<h2 class="pull-right download-label" style="display:block-inline;">Download:</h2>		
 		</div>
 	</div>
 </div>
