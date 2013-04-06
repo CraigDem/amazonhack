@@ -35,6 +35,11 @@
 	max-height: 450px !important;
 }
 
+.prettyprint {
+	padding-left: 20px !important;
+	margin-bottom: 0px !important;
+}
+
 .logo {
 	background-image: url('../img/sendr-white-small.png');
 	background-repeat: no-repeat;
@@ -51,6 +56,11 @@
 .message {
 	text-align: center;
 	padding-top: 40%;
+}
+
+.credit-span {
+	padding-left: 20px;
+	opacity: 0.3;
 }
 
 html {
