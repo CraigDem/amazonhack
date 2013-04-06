@@ -5,7 +5,7 @@
 </style>
 
 <div class="container">
-    <div class="well">
+    <div class="well well-fix">
     	<audio controls>
 	    	<!--<source src="horse.ogg" type="audio/ogg">-->
 	    	<source src="<?= base_url('testmusic.mp3');?>" type="audio/mpeg">
