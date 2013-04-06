@@ -500,8 +500,6 @@ require.register("dropzone/lib/dropzone.js", function(exports, require, module){
         return this.element.classList.remove("started");
       },
       addedfile: function(file) {
-        file.previewTemplate = Dropzone.createElement(this.options.previewTemplate);
-        this.previewsContainer.appendChild(file.previewTemplate);
         file.previewTemplate.querySelector(".filename span").textContent = file.name;
         return file.previewTemplate.querySelector(".details").appendChild(Dropzone.createElement("<div class=\"size\">" + (this.filesize(file.size)) + "</div>"));
       },
