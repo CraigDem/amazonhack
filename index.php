@@ -33,6 +33,7 @@ if (defined('ENVIRONMENT'))
 	switch (ENVIRONMENT)
 	{
 		case 'development':
+			ini_set('error_reporting', E_ALL);
 			error_reporting(E_ALL);
 		break;
 	

@@ -18,9 +18,13 @@ class Upload extends CI_Controller {
 		}
 		else
 		{
+			echo "about to get upload data";
+			
 			$data = $this->upload->data();
 			
 			$this->load->model('upload_model');
+			
+			echo "loaded upload model";
 			
 			//$file_identifier, $user, $name, $type, $bucket, $size, $url, $parent='
 			
@@ -28,9 +32,13 @@ class Upload extends CI_Controller {
 			$file_identifier = hash_file('sha256', './temp/' . $data['file_name']);
 			$file_identifier .= hash_file('md5', './temp/' . $data['file_name']);
 			
+			echo "file identifiers made";
+			
 			$bucket = $this->upload_model->get_nearest_bucket();
 			
 			$this->upload_model->move_to_s3($data['file_name'], $bucket, $file_identifier);
+			
+			echo "move to s3";
 			
 			$this->upload_model->store_upload(
 					$file_identifier,
