@@ -7,7 +7,7 @@
 <div class="container">
     <div class="well">
     	<video controls width="100%" height="auto">
-    		<source src="<?= $file_name;?>"</source>
+    		<source src="<?= base_url($file_name);?>"</source>
     	</video>
     </div>
     <div class="row-fluid">
