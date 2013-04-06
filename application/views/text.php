@@ -6,11 +6,9 @@
 	}
 </style>
 
-<?php $file = base_url('Nmax.java'); ?>
-
 <div class="container">
     <div class="well">	
-      	<pre class="pre-scrollable prettyprint linenums"><?= file_get_contents($file); ?></pre>
+      	<pre class="pre-scrollable prettyprint linenums"><?= file_get_contents($file_name); ?></pre>
     </div>
     <div class="span9 download-buttons pull-right">
 		<div class="btn-group dropup pull-right download-button">

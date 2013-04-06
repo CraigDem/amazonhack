@@ -8,7 +8,7 @@
     <div class="well well-fix">
     	<audio controls>
 	    	<!--<source src="horse.ogg" type="audio/ogg">-->
-	    	<source src="<?= base_url('testmusic.mp3');?>" type="audio/mpeg">
+	    	<source src="<?= $file_name;?>" type="audio/mpeg">
 	    	Your browser does not support the audio element, Download instead.
 	    </audio>
 	</div>

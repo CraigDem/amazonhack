@@ -6,7 +6,7 @@
 
 <div class="container">
     <div class="well">	
-      	<img height="auto" width="auto" src="<?= base_url('/img/nyancat.png');?>" />
+      	<img height="auto" width="auto" src="<?= $file_name;?>" />
     </div>
     <div class="span9 download-buttons pull-right">
 		<div class="btn-group dropup pull-right download-button">
