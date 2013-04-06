@@ -18,8 +18,8 @@
     <link href="<?= base_url('/css/bootstrap.css'); ?>" rel="stylesheet">
 
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="<?= base_url("/js/jquery.blockUI.js"); ?>"></script>
     <script type="text/javascript" src="<?= base_url('/js/dropzone.js');?>"></script>
 
 </head>
-
-
+<body>

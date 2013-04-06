@@ -6,6 +6,9 @@
     	</div>
 	</form>
 </div>
+
+<div id="loader"></div>
+
 <style>
 	#footer {
 		margin-top: -40px;

@@ -33,7 +33,7 @@ class Upload extends CI_Controller {
 			
 			$this->upload_model->move_to_s3($data['file_name'], $bucket, $file_identifier);
 			
-			$this->upload_model->store_upload(
+			$result = $this->upload_model->store_upload(
 					$file_identifier,
 					'anonymous',
 					$data['file_name'],
@@ -41,6 +41,8 @@ class Upload extends CI_Controller {
 					'amznhack-ireland',
 					$data['file_size']
 			);
+			
+			echo $result;
 		}
 	}
 }

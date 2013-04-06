@@ -912,6 +912,7 @@ require.register("dropzone/lib/dropzone.js", function(exports, require, module){
     };
 
     Dropzone.prototype.processQueue = function() {
+	  $.blockUI({ message: '<h2 style="margin-left: 10px; margin-right: 10px;">Upload in progress...</h2><img style="margin-bottom: 10px;" src="/amazonhack/img/loader.gif" />' });
       var i, parallelUploads, processingLength;
 
       parallelUploads = this.options.parallelUploads;
@@ -992,6 +993,7 @@ require.register("dropzone/lib/dropzone.js", function(exports, require, module){
     };
 
     Dropzone.prototype.finished = function(file, responseText, e) {
+		window.location = 'index.php/get_file/' + responseText;
       this.filesProcessing = without(this.filesProcessing, file);
       file.processing = false;
       this.processQueue();
@@ -1006,6 +1008,8 @@ require.register("dropzone/lib/dropzone.js", function(exports, require, module){
       this.processQueue();
       this.emit("error", file, message);
       return this.emit("complete", file);
+	  
+	  alert("Err... Something dun gone wrong here!");
     };
 
     return Dropzone;

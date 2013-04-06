@@ -34,6 +34,8 @@ class Upload_model extends CI_Model {
 		);
 		
 		$this->db->insert('files', $data);
+		
+		return $data['url'];
 	}
 	
 	function generate_next_url()

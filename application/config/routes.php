@@ -40,6 +40,8 @@
 
 $route['default_controller'] = "amazonhack";
 $route['404_override'] = '';
+$route['get_file/get_viewer/(:any)'] = "get_file/get_viewer/$1";
+$route['get_file/(:any)'] = "get_file/index/$1";
 
 
 /* End of file routes.php */
