@@ -1,7 +1,7 @@
 <div class="container-fluid main_uploader">
-	<form action="<?= site_url("upload"); ?>" class="logo dropzone" method="POST">
+	<form action="<?= site_url("upload"); ?>" class="logo dropzone" method="POST" enctype="multipart/form-data">
     	<div class="fallback">
-	    	<input name="file" type="file" />
+	    	<input name="userfile" type="file" />
 	    	<input type="submit" />
     	</div>
 	</form>
