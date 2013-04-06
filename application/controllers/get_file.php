@@ -21,6 +21,10 @@ class Get_file extends CI_Controller {
 		
 		$url_to_file = base_url("download/{$data['file_identifier']}/{$data['name']}");
 		
+		echo "<pre>";
+		print_r($data);
+		echo "</pre>";
+		
 		echo $url_to_file;
 	}
 }

@@ -33,9 +33,11 @@ class Retrieval_model extends CI_Model {
 		// We need to solve what viewer we want to open the file with!
 		$view = "download"; // Fall back to this if nothing better exists
 		
-		$sql = "SELECT `view` FROM `editors` WHERE `name` IN (
-			SELECT `editor` FROM `file_types` WHERE `extension`=?
-		)";
+		$sql = "SELECT `view` FROM `viewers` WHERE `name` IN (
+			SELECT `viewer` FROM `file_types` WHERE `id` IN (
+				SELECT `file_type` FROM `file_extensions` WHERE `extension`=?
+			)
+		);";
 		
 		$database_result = $this->db->query($sql, array($file->type));
 		
