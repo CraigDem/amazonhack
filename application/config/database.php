@@ -48,10 +48,10 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'localhost';
-$db['default']['username'] = '';
-$db['default']['password'] = '';
-$db['default']['database'] = '';
+$db['default']['hostname'] = 'maindatabase.cgkkjqiy8cft.eu-west-1.rds.amazonaws.com';
+$db['default']['username'] = 'dbuser';
+$db['default']['password'] = "babydon'thurtme";
+$db['default']['database'] = 'main';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
