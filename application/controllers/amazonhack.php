@@ -44,6 +44,13 @@
 			$this->load->view('text');
 			$this->load->view('assets/footer');
 		}
+		function image()
+		{				
+			$this->load->view('assets/header');
+			$this->load->view('assets/nav');
+			$this->load->view('image');
+			$this->load->view('assets/footer');
+		}
 		
 	}
 	
