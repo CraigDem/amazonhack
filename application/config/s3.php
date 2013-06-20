@@ -33,7 +33,7 @@ $config['verify_peer'] = TRUE;
 |
 */
 
-$config['access_key'] = 'AKIAJ24M6XHOJK25JIDQ';
+$config['access_key'] = 'AKIAJYPCYCJTGOSO65PQ';
 
 /*
 |--------------------------------------------------------------------------
@@ -44,4 +44,4 @@ $config['access_key'] = 'AKIAJ24M6XHOJK25JIDQ';
 |
 */
 
-$config['secret_key'] = '1JRfcj66YH0CH8+pIOgecPpJeArJ749uJ6b/b8fK';
+$config['secret_key'] = 's/jMSHsvXcXOxr8yh1DpJdmL0kyxI63sh9SMW84q';

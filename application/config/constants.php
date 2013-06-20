@@ -36,6 +36,7 @@ define('FOPEN_READ_WRITE_CREATE',				'a+b');
 define('FOPEN_WRITE_CREATE_STRICT',				'xb');
 define('FOPEN_READ_WRITE_CREATE_STRICT',		'x+b');
 
-
+define('UPLOAD_TEMP', '../sendr-temp/');
+define('S3_URL_LIFETIME', 3600); // 1 hour
 /* End of file constants.php */
 /* Location: ./application/config/constants.php */

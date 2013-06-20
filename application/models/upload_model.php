@@ -4,12 +4,12 @@ class Upload_model extends CI_Model {
 	{
 		$this->load->library("s3");
 		
-		$file = $this->s3->inputFile("./temp/$file_name");
+		$file = $this->s3->inputFile(UPLOAD_TEMP . $file_name);
 
-		$success = $this->s3->putObject($file, $bucket, $file_identifier);
+		$success = $this->s3->putObject($file, $bucket, "$file_identifier/$file_name");
 
 		// Delete the temp file
-		unlink("./temp/$file_name");
+		unlink(UPLOAD_TEMP . $file_name);
 		
 		return $success;
 	}
@@ -17,7 +17,7 @@ class Upload_model extends CI_Model {
 	function get_nearest_bucket()
 	{
 		// TODO: Implement multiple buckets and selecting the nearest
-		return "amznhack-ireland";
+		return "sendr-dev";
 	}
 	
 	function store_upload($file_identifier, $user, $name, $type, $bucket, $size, $parent='')
@@ -26,7 +26,7 @@ class Upload_model extends CI_Model {
 			'file_identifier'	=> $file_identifier,
 			'user'				=> $user,
 			'name'				=> $name,
-			'type'				=> $type,
+			'type'				=> strtolower($type),
 			'bucket'			=> $bucket,
 			'size'				=> $size,
 			'url'				=> $this->generate_next_url(),
@@ -40,20 +40,19 @@ class Upload_model extends CI_Model {
 	
 	function generate_next_url()
 	{
-		$this->db->select('url');
-		$this->db->from('files');
-		$this->db->order_by('id', 'desc');
-		
-		$data = $this->db->get();
-		
-		$url = "kdyek";
-		if ($data->num_rows() != 0)
-		{
-			$url = $data->row();
-			$url = $url->url;
-			$url++; // Increment to get next url
-		}
-		
-		return $url;
-	}
+        $slug_length = 7;
+
+		// Generate random URL slugs, loop until one is free
+        $slug = '';
+        do
+        {
+            $slug = substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, $slug_length);
+
+            $this->db->where('url', $slug);
+            $database_response = $this->db->get('files');
+        }
+        while ($database_response->num_rows() != 0);
+
+        return $slug;
+    }
 }

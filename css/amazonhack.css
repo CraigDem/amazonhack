@@ -97,3 +97,8 @@ body {
 .credit {
 	margin-top: 0;
 }
+
+/* Override prettyfy to put line numbers on each line instead of every 5 lines! */
+ol.linenums li {
+    list-style-type: decimal !important;
+}

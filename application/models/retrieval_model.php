@@ -2,6 +2,8 @@
 class Retrieval_model extends CI_Model {
 	function get_file($url_slug)
 	{
+        $this->load->library("s3");
+
 		$sql = "
 			SELECT
 				`file_identifier`, `bucket`, `size`, `name`, `type`
@@ -10,51 +12,40 @@ class Retrieval_model extends CI_Model {
 			WHERE
 				`url` = ?;
 		";
-		
+
 		$database_result = $this->db->query($sql, array($url_slug));
-		
+
 		if ($database_result->num_rows() == 0)
 		{
 			return false;
 		}
-		
-		$file = $database_result->row();
-		
-		$this->load->library("s3");
-		
-		// Make a directory to hold the file
-		if (!file_exists("./download/" . $file->file_identifier))
-		{
-			mkdir("./download/" . $file->file_identifier);
 
-			$this->s3->getObject($file->bucket, $file->file_identifier, "./download/" . $file->file_identifier . "/" . $file->name);
-		}
-			
+		$file = $database_result->row();
+
+
 		// We need to solve what viewer we want to open the file with!
 		$view = "download"; // Fall back to this if nothing better exists
-		
-		$sql = "SELECT `view` FROM `viewers` WHERE `name` IN (
-			SELECT `viewer` FROM `file_types` WHERE `id` IN (
-				SELECT `file_type` FROM `file_extensions` WHERE `extension`=?
-			)
-		);";
-		
+
+		$sql = "SELECT `view` FROM `file_types` WHERE `extension`=?";
+
 		$database_result = $this->db->query($sql, array($file->type));
-		
+
 		if ($database_result->num_rows() != 0)
 		{
 			$row = $database_result->row();
 			$view = $row->view;
 		}
-		
+
+        $s3_url = $this->s3->getAuthenticatedURL($file->bucket, "{$file->file_identifier}/{$file->name}", S3_URL_LIFETIME);
+
 		// Build final array of data
 		$data = array(
-			'file_identifier'	=> $file->file_identifier,
+			's3_url'	        => $s3_url,
 			'name'				=> $file->name,
 			'size'				=> $file->size,
 			'view'				=> $view
 		);
-		
+
 		return $data;
 	}
 }

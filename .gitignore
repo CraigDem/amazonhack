@@ -6,4 +6,5 @@
 /nbproject/private/
 
 application/config/database.php
+application/config/s3.php
 download/*

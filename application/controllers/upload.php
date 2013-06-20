@@ -1,9 +1,9 @@
 <?php
 class Upload extends CI_Controller {
 	function index()
-	{	
+	{
 		// This code will do the upload
-		$config['upload_path'] = './temp/';
+		$config['upload_path'] = UPLOAD_TEMP;
 		$config['allowed_types'] = '*';
 		
 		$this->load->library('upload', $config);
@@ -26,8 +26,8 @@ class Upload extends CI_Controller {
 			//$file_identifier, $user, $name, $type, $bucket, $size, $url, $parent='
 			
 			// Calculate the file identifier
-			$file_identifier = hash_file('sha256', './temp/' . $data['file_name']);
-			$file_identifier .= hash_file('md5', './temp/' . $data['file_name']);
+			$file_identifier = hash_file('sha256', UPLOAD_TEMP . $data['file_name']);
+			$file_identifier .= hash_file('md5', UPLOAD_TEMP . $data['file_name']);
 			
 			$bucket = $this->upload_model->get_nearest_bucket();
 			
@@ -38,7 +38,7 @@ class Upload extends CI_Controller {
 					'anonymous',
 					$data['file_name'],
 					$data['file_ext'],
-					'amznhack-ireland',
+					'sendr-dev',
 					$data['file_size']
 			);
 			
